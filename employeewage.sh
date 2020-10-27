@@ -4,10 +4,10 @@ maxHrsInMonth=10
 empRatePerHr=20
 numWorkingDays=20
 
-totalEnpHrs=0
+totalEmpHrs=0
 totalWorkingDays=0
 
-function getWorkingHours() {
+function getWorkingHours(){
 	case $1 in
 		$isPartTime)
 			empHrs=4
@@ -21,21 +21,22 @@ function getWorkingHours() {
 	esac
 	echo $empHrs
 }
-function calDailyWages() {
+
+function calDailyWages(){
 	totalWorkHrs=$1;
-	wages=$(( $totalWorkHrs * $empRatePerHr ))
+	wages=$(( $totalWorkHrs*$empRatePerHr ))
 	echo $wages;
 }
-while [[ $totalEmpHrs -lt $maxHrsInMonth && $totalWorkingDays -lt $numWorkingDays ]]
+while [[ $totalEmpHrs -lt $maxHrsMonth && $totalWorkingDays -lt $numWorkingDays ]]
 do
-	totalWorkingDays=$(($totalWorkingDays + 1))
-	empHrs="$(getWorkingHrs$((RANDOM%3)) )"
-	totalEmpHrs=$(($totalEmpHrs + $empHrs))
-	empDailyWages[$totalWorkingDays]="$(calDailyWages$empHrs)"
+	totalWorkingDays=$(($totalWorkingDays+1))
+	empHrs="$(getWorkingHours $(( RANDOM%3)) )"
+	totalEmpHrs=$(($totalEmpHrs+$empHrs))
+	empDailyWages[$totalWorkingDays]="$(calDailyWages $empHrs)"
 done
 totalSalary="$(calDailyWages $totalEmpHrs)"
-echo "daily wages :"
-    ${empDailyWages[@]}
+echo "daily wages :"${empDailyWages[@]}
+echo "All Keys :"${!empDailyWages[@]}
 
 
 
