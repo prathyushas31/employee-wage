@@ -3,23 +3,22 @@ isFullTime=2
 maxHrsInMonth=10
 empRatePerHr=20
 numWorkingDays=20
-
-totalEnpHrs=0
+totalEmpHrs=0
 totalWorkingDays=0
 
 function getWorkingHours() {
-	case $1 in
-		$isPartTime)
-			empHrs=4
-			;;
-		$isFullTime)
-			empHrs=8
-			;;
-		*)
-			empHrs=0
-			;;
-	esac
-	echo $empHrs
+case $1 in
+	$isPartTime)
+		empHrs=4
+		;;
+	$isFullTime)
+		empHrs=8
+		;;
+	*)
+	empHrs=0
+	;;
+esac
+echo $empHrs
 }
 function calDailyWages() {
 	totalWorkHrs=$1;
