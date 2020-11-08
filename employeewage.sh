@@ -3,6 +3,7 @@ isFullTime=2
 maxHrsInMonth=10
 empRatePerHr=20
 numWorkingDays=20
+<<<<<<< HEAD
 
 totalEmpHrs=0
 totalWorkingDays=0
@@ -20,6 +21,24 @@ function getWorkingHours(){
 			;;
 	esac
 	echo $empHrs
+=======
+totalEmpHrs=0
+totalWorkingDays=0
+
+function getWorkingHours() {
+case $1 in
+	$isPartTime)
+		empHrs=4
+		;;
+	$isFullTime)
+		empHrs=8
+		;;
+	*)
+	empHrs=0
+	;;
+esac
+echo $empHrs
+>>>>>>> UC8-store-the-daily-wage-along-with-total-wage
 }
 
 function calDailyWages(){
