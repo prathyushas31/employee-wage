@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 isPartTime=1
 isFullTime=2
 maxHrsInMonth=10
@@ -73,6 +74,8 @@ echo "All Keys :"${!empDailyWages[@]}
  fi
 >>>>>>> UC1-check-whether-employee-is-present-or-absent
 =======
+=======
+>>>>>>> UC3-add-the-parttime-employee
  isPresent=1;
  randomCheck=$(( RANDOM%2 ));
 
@@ -84,5 +87,8 @@ echo "All Keys :"${!empDailyWages[@]}
  else
 	 salary=0;
  fi
+<<<<<<< HEAD
 >>>>>>> UC2-check-daily-employee-wage
+=======
+>>>>>>> UC3-add-the-parttime-employee
 
