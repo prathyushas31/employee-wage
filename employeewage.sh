@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 isPartTime=1
 isFullTime=2
 maxHrsInMonth=10
@@ -91,4 +92,23 @@ echo "All Keys :"${!empDailyWages[@]}
 >>>>>>> UC2-check-daily-employee-wage
 =======
 >>>>>>> UC3-add-the-parttime-employee
+=======
+ isPartTime=1;
+ isFullTime=2;
+ empRatePerHr=20;
+ empCheck=$(( RANDOM%3 ));
+
+ case $empCheck in
+	 $isFullTime)
+		empHrs=8
+		;;
+	$isPartTime)
+		empHrs=4
+		;;
+	*)
+	empHrs=0
+	;;
+ esac
+ salary=$(( $empHrs*$empRatePerHr ));
+>>>>>>> UC4-solving-using-switch-case-statement
 
