@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 isPartTime=1
 isFullTime=2
 maxHrsInMonth=10
@@ -60,4 +61,14 @@ echo "All Keys :"${!empDailyWages[@]}
 
 
 
+=======
+ isPresent=1;
+ randomCheck=$(( RANDOM%2 ));
+ if [ $isPresent -eq $randomCheck ];
+ then
+   	echo "Employee is Present";
+ else
+   	echo "Employee is absent";
+ fi
+>>>>>>> UC1-check-whether-employee-is-present-or-absent
 
